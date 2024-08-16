@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the World</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="fade-in">
+            <div class="logo">
+                <h1>AUGNIK BANERJEE</h1>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section slide-in">
+        <div class="hero-content">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Explore exotic destinations and unforgettable experiences.</p>
+            <a href="#about" class="btn">Find Out More</a>
+        </div>
+    </section>
+
+    <section id="about" class="fade-in-on-scroll">
+        <h2>About Us</h2>
+        <p>We are dedicated to helping you find your dream vacation with personalized travel services.</p>
+        <ul>
+            <li>Tailor-Made Itineraries</li>
+            <li>Expert Travel Advice</li>
+            <li>24/7 Customer Support</li>
+        </ul>
+        <div class="why-choose-us">
+            <h3>Why Choose Us?</h3>
+            <p>We provide unparalleled travel experiences with our attention to detail and commitment to customer satisfaction.</p>
+        </div>
+    </section>
+
+    <section id="services" class="slide-in-on-scroll">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service-card">
+                <h3>Flight Booking</h3>
+                <p>Get the best deals on flights to your favorite destinations.</p>
+            </div>
+            <div class="service-card">
+                <h3>Hotel Reservations</h3>
+                <p>Book luxury hotels at affordable prices with us.</p>
+            </div>
+            <div class="service-card">
+                <h3>Tour Packages</h3>
+                <p>Enjoy all-inclusive tour packages to the most popular locations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="destinations" class="fade-in-on-scroll">
+        <h2>Popular Destinations</h2>
+        <div class="destinations-container">
+            <div class="destination-card">
+                <img src="images/pexels-pixabay-2363.jpg" alt="Paris">
+                <h3>Paris</h3>
+                <p>Experience the romance of Paris with its iconic landmarks and exquisite cuisine.</p>
+                <a href="#" class="btn">Explore More</a>
+            </div>
+            <div class="destination-card">
+                <img src="images/pexels-freestockpro-2166553.jpg" alt="Bali">
+                <h3>Bali</h3>
+                <p>Discover the tranquil beaches and vibrant culture of Bali.</p>
+                <a href="#" class="btn">Explore More</a>
+            </div>
+            <!-- Add more destination cards as needed -->
+        </div>
+    </section>
+
+    <section id="testimonials" class="slide-in-on-scroll">
+        <h2>Testimonials</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <p>"The trip was perfectly planned and executed. Every detail was taken care of!"</p>
+                <span>- Alex Johnson</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"Best travel experience ever! Highly recommend their services."</p>
+                <span>- Maria Garcia</span>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+    </section>
+
+    <section id="gallery" class="fade-in-on-scroll">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="images/pexels-freestockpro-2166553.jpg" alt="Scenic view">
+            <img src="images/pexels-nurseryart-346885.jpg" alt="Mountain">
+            <img src="images/pexels-pixabay-2363.jpg" alt="Cityscape">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <section id="contact" class="slide-in-on-scroll">
+        <h2>Contact Us</h2>
+        <p>Email: travel@explore.com</p>
+        <p>Phone: +1-800-123-4567</p>
+    </section>
+
+    <footer class="fade-in-on-scroll">
+        <p>© 2024 Augnik Travel Agency. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for adding the visible class on scroll
+        const faders = document.querySelectorAll('.fade-in-on-scroll');
+        const sliders = document.querySelectorAll('.slide-in-on-scroll');
+
+        const appearOptions = {
+            threshold: 0,
+            rootMargin: "0px 0px -100px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(
+            entries,
+            appearOnScroll
+        ) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        sliders.forEach(slider => {
+            appearOnScroll.observe(slider);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #5067ce;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff5722;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: url('images/pexels-nurseryart-346885.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 3s ease-in;
+}
+
+.hero-section .btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-section .btn:hover {
+    background-color: #e64a19;
+    transform: scale(1.1);
+}
+
+/* About Section */
+#about {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p, #about ul {
+    margin: 20px 0;
+}
+
+#about ul {
+    list-style: none;
+}
+
+#about ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #3474c7;
+    color: white;
+    border-radius: 10px;
+}
+
+.why-choose-us h3 {
+    font-size: 2rem;
+}
+
+/* Services Section */
+#services {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Destinations Section */
+#destinations {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#destinations h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.destinations-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.destination-card {
+    max-width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.destination-card img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.destination-card h3 {
+    font-size: 1.8rem;
+    margin: 15px 0;
+}
+
+.destination-card p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    max-width: 300px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.testimonial-card p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-card span {
+    font-weight: bold;
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery-container img {
+    max-width: 300px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #3362aa;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #ff5722;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+.slide-in {
+    animation: slideIn 1s ease-in-out;
+}
+
+.fade-in-on-scroll {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.fade-in-on-scroll.visible {
+    opacity: 1;
+}
+
+.slide-in-on-scroll {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.slide-in-on-scroll.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-container, .destinations-container, .testimonials-container, .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
